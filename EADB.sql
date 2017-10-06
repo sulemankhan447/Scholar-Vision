@@ -28,13 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `code` (
   `rollno` varchar(20) NOT NULL,
-  `code` text NOT NULL,
-  `output` text NOT NULL,
-<<<<<<< HEAD
-  `marks` int(11) ,
-=======
+  `code` text DEFAULT NULL,
+  `output` text DEFAULT NULL,
   `marks` int(11) DEFAULT NULL,
->>>>>>> 1552439b104e4f47c02c1bac3e3e7e26471c963f
   `tos` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -49,7 +45,7 @@ CREATE TABLE `exp_detail` (
   `e_id` int(20) NOT NULL,
   `e_aim` varchar(255) DEFAULT NULL,
   `writeup` varchar(255) DEFAULT NULL,
-  `dos` date DEFAULT NULL
+  `dos` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -60,7 +56,7 @@ CREATE TABLE `exp_detail` (
 
 CREATE TABLE `final` (
   `rollno` varchar(20) NOT NULL,
-  `file` mediumtext NOT NULL
+  `file` mediumtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
