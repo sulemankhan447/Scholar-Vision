@@ -1,76 +1,70 @@
-<!-- TE CO Subjects-->
+<!-- SE CO Subjects-->
 <?php 
 	session_start();
-?>
+	if($_SESSION)
+	{
+		?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Sem 4</title>
 	<!-- Bootstrap Core CSS-->
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 </head>
 <body>
-		<!--<a href="http://localhost/ExpPor/index.html" id=log class="btn btn-primary btn-xl page-scroll" style="margin-left: 1150px">Logout</a> -->
 		<div class="jumbotron text-center">
-		<img src="img/avatar.png" alt="Profile Pic" width="250" height="250" class="img-circle"></img>
+		<img src="../../img/avatar.png" alt="Profile Pic" width="250" height="250" class="img-circle"></img>
 		<h4>Welcome <?php echo $_SESSION['userName'];?></h4>
 		<h4>Year:SE:CO</h4>
 	</div>
 
 	<div class="container">
 		<div class="row">
-			<!-- Computer Networks-->
+			<!-- Analysis of Algorithm-->
 			<div class="col-lg-3">			
 				<div class="card" style="width: 20rem;">
- 					<img class="card-img-top" src="img/cn.png"  width="200" height="200" alt="Computer Networks">
+ 					<img class="card-img-top" src="img/aoa.png"  width="200" height="200" alt="Analysis of Algorithm">
   					<div class="card-block">
   						<h4 class="card-title">Analysis of Algorithm</h4>
+  						<hr>
    						<p class="card-text">Learn Insights of Algorithm</p>
-  						<a href="uploadExperiment.php?subject=cn" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<a href="uploadExperiment.php?subject=aoa" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
 					</div>
 				</div>
 			</div>
-			<!-- Micro Processors-->
+			<!-- DBMS-->
 			<div class="col-lg-3">			
 				<div class="card" style="width: 20rem;">
- 					<img class="card-img-top" src="img/mp.png"  width="200" height="200" alt="Computer Networks">
+ 					<img class="card-img-top" src="img/dbms.png"  width="200" height="200" alt="Database Management System">
   					<div class="card-block">
-  						<h4 class="card-title">MicroProcessors</h4>
-   						<p class="card-text">Explore World of MicroProcessors</p>
-  						<a href="uploadExperiment.php?subject=mp" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<h4 class="card-title">Database Management System</h4>
+  						<hr>
+   						<p class="card-text">Learn how Big I.T giants save their Data</p>
+  						<a href="uploadExperiment.php?subject=dbms" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
 					</div>
 				</div>
 			</div>
-			<!-- WTL-->
+			<!-- COA-->
 			<div class="col-lg-3">			
 				<div class="card" style="width: 20rem;">
- 					<img class="card-img-top" src="img/wtl.png"  width="200" height="200" alt="Computer Networks">
+ 					<img class="card-img-top" src="img/coa.png"  width="200" height="200" alt="Computer Organization & Architecture">
   					<div class="card-block">
-  						<h4 class="card-title">WTL</h4>
-   						<p class="card-text">Explore World of Web Development</p>
-  						<a href="uploadExperiment.php?subject=wtl" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<h4 class="card-title">Computer Organization & Architecture</h4>
+  						<hr>
+   						<p class="card-text">Explore World of Hardware and their Functionality</p>
+  						<a href="uploadExperiment.php?subject=coa" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
 					</div>
 				</div>
 			</div>
-			<!-- Opertaing System-->
+			<!-- Computer Graphics-->
 			<div class="col-lg-3">			
 				<div class="card" style="width: 20rem;">
- 					<img class="card-img-top" src="img/os.png"  width="200" height="200" alt="Computer Networks">
+ 					<img class="card-img-top" src="img/cg.png"  width="200" height="200" alt="Computer Networks">
   					<div class="card-block">
-  						<h4 class="card-title">Operating System</h4>
-   						<p class="card-text">Learn Processes,Memory Management etc.</p>
-  						<a href="uploadExperiment.php?subject=os" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
-					</div>
-				</div>
-			</div>
-			<!-- SOAD-->
-			<div class="col-lg-3">			
-				<div class="card" style="width: 20rem;">
- 					<img class="card-img-top" src="img/soad.png"  width="200" height="200" alt="Computer Networks">
-  					<div class="card-block">
-  						<h4 class="card-title">SOAD</h4>
-   						<p class="card-text">World of Diagrams</p>
-  						<a href="uploadExperiment.php?subject=soad" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<h4 class="card-title">Computer Graphics</h4>
+  						<hr>
+   						<p class="card-text">Dive into world of Graphics & Animations.</p>
+  						<a href="uploadExperiment.php?subject=cg" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
 					</div>
 				</div>
 			</div>
@@ -84,3 +78,11 @@
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 </body>
 </html>
+
+		<?php
+	}
+	else
+	{
+		header("Location:../../../web/index.php");
+	}
+?>

@@ -1,11 +1,13 @@
 <!-- TE CO Sem 6 Subjects-->
 <?php 
 	session_start();
-?>
-<!DOCTYPE html>
+	if($_SESSION)
+	{
+		?>
+		<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Sem 6</title>
 	<!-- Bootstrap Core CSS-->
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 </head>
@@ -26,7 +28,7 @@
   					<div class="card-block">
   						<h4 class="card-title">System Programming</h4>
    						<p class="card-text">Dive into Depth of Programming</p>
-  						<a href="uploadExperiment.php?subject=cn" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<a href="../../uploadExperiment.php?subject=cn" class="btn btn-primary" target="_blank">Lets ../../upload Experiments</a>
 					</div>
 				</div>
 			</div>
@@ -37,7 +39,7 @@
   					<div class="card-block">
   						<h4 class="card-title">Software Engineering</h4>
    						<p class="card-text">Learn Software Engineering</p>
-  						<a href="uploadExperiment.php?subject=mp" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<a href="../../uploadExperiment.php?subject=mp" class="btn btn-primary" target="_blank">Lets ../../upload Experiments</a>
 					</div>
 				</div>
 			</div>
@@ -48,7 +50,7 @@
   					<div class="card-block">
   						<h4 class="card-title">Distributed Databases</h4>
    						<p class="card-text">Replication,Fragmentation</p>
-  						<a href="uploadExperiment.php?subject=wtl" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<a href="../../uploadExperiment.php?subject=wtl" class="btn btn-primary" target="_blank">Lets ../../upload Experiments</a>
 					</div>
 				</div>
 			</div>
@@ -59,7 +61,7 @@
   					<div class="card-block">
   						<h4 class="card-title">Mobile Communication</h4>
    						<p class="card-text">3G,4G and Signals</p>
-  						<a href="uploadExperiment.php?subject=os" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<a href="../../uploadExperiment.php?subject=os" class="btn btn-primary" target="_blank">Lets ../../upload Experiments</a>
 					</div>
 				</div>
 			</div>
@@ -70,7 +72,7 @@
   					<div class="card-block">
   						<h4 class="card-title">Operations Research</h4>
    						<p class="card-text">Lorem Ipsum Lorem Ipsum</p>
-  						<a href="uploadExperiment.php?subject=soad" class="btn btn-primary" target="_blank">Lets Upload Experiments</a>
+  						<a href="../../uploadExperiment.php?subject=soad" class="btn btn-primary" target="_blank">Lets ../../upload Experiments</a>
 					</div>
 				</div>
 			</div>
@@ -84,3 +86,10 @@
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 </body>
 </html>
+		<?php
+	}
+	else
+	{
+		header("Location:../../../web/index.php");
+	}
+?>
