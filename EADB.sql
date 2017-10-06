@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 06, 2017 at 11:46 AM
+-- Generation Time: Oct 06, 2017 at 12:07 PM
 -- Server version: 5.7.18-0ubuntu0.16.10.1
 -- PHP Version: 7.0.18-0ubuntu0.16.10.1
 
@@ -30,7 +30,7 @@ CREATE TABLE `code` (
   `rollno` varchar(20) NOT NULL,
   `code` text NOT NULL,
   `output` text NOT NULL,
-  `marks` int(11) NOT NULL,
+  `marks` int(11) DEFAULT NULL,
   `tos` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
