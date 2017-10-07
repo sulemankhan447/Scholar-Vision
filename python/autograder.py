@@ -5,7 +5,7 @@ from sqlite3 import Error
 import bs4 as bs
 import urllib.request
 from difflib import SequenceMatcher
-
+import sys
 
 # ================ CONFIG ================
 
@@ -18,23 +18,30 @@ db = "EADB"
 
 m = 0
 
+rno = sys.argv[1]
+sn = sys.argv[2]
+eid = sys.argv[3]
+eid = int(eid)
+
 db = MySQLdb.connect(host=host, user=user, passwd=passwd, db=db)
 cur = db.cursor()
 
 # =====================Get data from Database===========================
 
-cur.execute("select rollno, name from student where rollno = '1' ")
+#cur.execute("select rollno, name from student where rollno = '1' ")
+#cur.execute("select rollno, name from student where rollno = rno ")
 #cur.execute("select tos, code, output from code where rollno = ? ")
-rollno, name = cur.fetchone()
+#rollno, name = cur.fetchone()
 
-cur.execute("select tos, code, output from code where rollno = '1' ")
+#cur.execute("select tos, code, output from code where rollno = '1' ")
+cur.execute("select tos, code, output from code where rollno = %s " %(rno))
 #cur.execute("select tos, code, output from code where rollno = ? ")
 tos, c, output = cur.fetchone()
 
-cur.execute("select dos from exp_detail where s_name = 'OS' and e_id = 1")
+#cur.execute("select dos, writeup from exp_detail where s_name = 'OS' and e_id = 1 ")
+cur.execute("select dos, writeup from exp_detail where s_name = 'OS' and e_id = %s " %(eid))
 #cur.execute("select dos, writeup from exp_detail where s_name = ? and e_id = ?")
-dos = cur.fetchone()
-
+dos, writeup = cur.fetchone()
 
 
 #=====================Required Functions For Grading=====================
@@ -80,7 +87,7 @@ def plag():
 		
 		copy = (int(max(r)*100))
 	
-	except(ValueError) as e:
+	except(ValueError, urllib.error.HTTPError) as e:
 		copy = 0
 		
 	except:
@@ -107,7 +114,6 @@ else:
 
 
 #para3- Plaguarism
-
 copy = plag()
 
 if(copy > 70):
@@ -118,7 +124,8 @@ else:
 	m += 6
 
 
-cur.execute("update code set marks=%s where rollno='1' " % (m))
+#cur.execute("update code set marks=%s where rollno='1' " % (m))
+cur.execute("update code set marks=%s where rollno=%s " % (m,rno))
 #cur.execute("update code set marks=%s where rollno=? " % (m))
 print(m)
 
