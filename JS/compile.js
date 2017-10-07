@@ -102,5 +102,12 @@ app.route('/')
 });
 compiler.flush(function(){
     console.log('All temporary files flushed !');
+
+    app.route('/uploadProcess.php')
+    .get((request,response) => {
+      response.render('upload.ejs');
+    }).post(urlencodedParser,(request,response) => {      //POST REQUEST USING URLENCODER
+        response.send("Your File has been uploaded sucessfully");
+    })
 });
-app.listen(8005);
+app.listen(8006);
