@@ -77,8 +77,8 @@ def plag():
 	code = c
 	try:
 		r=[]
-		#urls=["http://www.programmingsimplified.com/c-program-add-two-numbers","http://scanftree.com/programs/c/to-find-factorial-of-a-number-using-c-program/","http://www.sanfoundry.com/c-program-armstrong-number/"]
-		urls = history()
+		urls=["http://www.programmingsimplified.com/c-program-add-two-numbers","http://scanftree.com/programs/c/to-find-factorial-of-a-number-using-c-program/","http://www.sanfoundry.com/c-program-armstrong-number/"]
+		#urls = history()
 		for url in urls:
 			sauce = urllib.request.urlopen(url).read()
 			soup = bs.BeautifulSoup(sauce,'lxml')
