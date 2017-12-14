@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Faculty Admin</title>
+	<title>Faculty Admin Panel</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -29,14 +29,19 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
 </head>
 <body>
 
 <div class="wrapper">
     <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 
-    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+    <!--
 
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
 
     	<div class="sidebar-wrapper">
             <div class="logo">
@@ -45,39 +50,29 @@
                 </a>
             </div>
 
-             <ul class="nav">
-                <li class="active">
+            <ul class="nav">
+                <li>
                     <a href="user.html">
                         <i class="pe-7s-graph"></i>
                         <p>Profile</p>
                     </a>
                 </li>
-                <li>
-                    <a href="table.html">
+                <li class="active">
+                    <a href="writeups.php">
                         <i class="pe-7s-user"></i>
                         <p>Write-Ups</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="experiments.php">
                         <i class="pe-7s-note2"></i>
                         <p>Experiments</p>
                     </a>
                 </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Annocment</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
+
+
             </ul>
-        </div>
+    	</div>
     </div>
 
     <div class="main-panel">
@@ -102,7 +97,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="dashboard.html">
+                            <a href="#">
                                 Log out
                             </a>
                         </li>
@@ -119,76 +114,24 @@
                         <div class="card">
 
                             <div class="header">
-                                <h4 class="title">Write Ups</h4>
-                                <p class="category">Uploaded by faculty name</p>
+                                <h4 class="title">Writeup: </h4>
+                                <br>
+                                <textarea class="form-group" rows="22" cols="140">
+
+                                </textarea>
+                                </h4>
+
+																<div align = "center">
+																	<input type="button" value="Submit" class="btn btn-primary">
+
+															</div>
+															<br>
                             </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>E_ID</th>
-                                    	<th>S_Name</th>
-                                    	<th>E_AIM</th>
-                                    	<th>Date of Submission</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        	<td>1</td>
-                                        	<td>Dakota Rice</td>
-                                        	<td>$36,738</td>
-                                        	<td>Niger</td>
-
-                                        </tr>
-                                        <tr>
-                                        	<td>2</td>
-                                        	<td>Minerva Hooper</td>
-                                        	<td>$23,789</td>
-                                        	<td>Curaçao</td>
-
-                                        </tr>
-                                        <tr>
-                                        	<td>3</td>
-                                        	<td>Sage Rodriguez</td>
-                                        	<td>$56,142</td>
-                                        	<td>Netherlands</td>
-
-                                        </tr>
-                                        <tr>
-                                        	<td>4</td>
-                                        	<td>Philip Chaney</td>
-                                        	<td>$38,735</td>
-                                        	<td>Korea, South</td>
-
-                                        </tr>
-                                        <tr>
-                                        	<td>5</td>
-                                        	<td>Doris Greene</td>
-                                        	<td>$63,542</td>
-                                        	<td>Malawi</td>
-
-                                        </tr>
-                                        <tr>
-                                        	<td>6</td>
-                                        	<td>Mason Porter</td>
-                                        	<td>$78,615</td>
-                                        	<td>Chile</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                 </div>
-            </div>
-        </div>
-
-
-
-    </div>
-</div>
-
-
+                  </div>
 </body>
 
     <!--   Core JS Files   -->
@@ -212,6 +155,5 @@
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-
 
 </html>
